@@ -1,0 +1,7 @@
+def reversestr(s):
+    result = ""
+    for i in s:                                         
+        result = i + result                              
+    return result                                        
+s = input("enter the word to be reversed:")             
+print(reversestr(s))  
