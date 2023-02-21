@@ -1,0 +1,12 @@
+n = int(input("enter the number(starting from 1) upto which odd and even number to calculate:"))
+numbers = range(1,n)
+even_number = 0
+odd_number = 0
+for i in numbers:
+    if(i%2==0):
+        even_number = even_number + 1
+    else:
+        odd_number = odd_number + 1
+print("Number of even numbers is :", even_number)   
+print("Number of odd numbers is :", odd_number)    
+     
