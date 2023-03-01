@@ -1,0 +1,8 @@
+asciidict = dict()
+alfabets = range(97,123)
+for i in alfabets:
+    asciidict[chr(i)] = str(i)
+print(asciidict)
+asciidict[chr(i)] = i
+import string
+d = {c: ord(c) for c in string.ascii_lowercase}

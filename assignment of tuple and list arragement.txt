@@ -1,0 +1,21 @@
+
+
+
+
+
+PROGRAM:-
+
+given_tuple = [(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]
+length = len(given_tuple)
+for i in range(0, length):	
+	for j in range(0, length-i-1):
+         if(given_tuple[j][-1] > given_tuple[j + 1][-1]):
+                temp = given_tuple[j]
+                given_tuple[j]= given_tuple[j + 1]
+                given_tuple[j + 1]= temp
+
+print(given_tuple)
+
+
+
+
