@@ -1,0 +1,14 @@
+def prime(n):
+  x = 0
+  for i in range(2,(n//2)+1):
+    if n%i==0:
+       x = 1
+       break
+  return x
+
+number = int(input("Enter the number:- "))                 #input has to be integer
+
+print("Twins Prime : ")
+for i in range(2,number):                      #2 is taken constant coz we need o/p after no-2
+  if prime(i)==0 and prime(i+2)==0:
+    print(i, "and" ,i+2);

@@ -1,0 +1,8 @@
+given_numbers = (8, 2, 3, 0, 7)
+def sum(given_numbers):
+    final_value = 0
+
+    for a in given_numbers:
+        final_value += a
+    return final_value
+print(sum(given_numbers)) 

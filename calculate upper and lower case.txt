@@ -1,0 +1,13 @@
+def counting_upper_lower_letters(String):
+    upper_count = 0
+    lower_count = 0
+    for char in String:
+        if char.isupper():
+            upper_count += 1
+        elif char.islower():
+            lower_count +=1
+    print("Number of Upper Case count is : ", upper_count)
+    print("Number of Lower Case count is : ", lower_count)
+
+Output = input("Enter A String : ")
+counting_upper_lower_letters(Output)
