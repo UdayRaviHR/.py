@@ -1,0 +1,19 @@
+class Student:
+   
+    def getname(self):
+        return self.__name
+    def setname(self, name):
+        self.__name = name  
+
+    def getrollnumber(self):
+        return self.__number
+    def setrollnumber(self, number):
+        self.__number = number     
+
+std = Student()
+
+std.setname(str(input("enter the student name: ")))   
+std.setrollnumber(int(input("enter the rollnumber of the student:")))
+
+print(std.getname())
+print(std.getrollnumber())
