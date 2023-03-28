@@ -1,0 +1,179 @@
+1)
+class Point:
+    def __init__(self, x, y, z):
+        self.x = x
+        self.y = y
+        self.z = z 
+
+    def sqsum(self):
+        return (self.x * self.x) + (self.y * self.y) + (self.z * self.z)   #squaring and suming
+    
+p1 = Point(1, 3, 5)    #properties= (1,3,5)->inputs
+
+print(p1.sqsum())
+
+   
+
+
+
+
+
+
+
+
+
+
+2)
+class Calculator:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y  
+    def add(self):
+        return (self.x + self.y)
+    def subtract(self):
+        return (self.y - self.x)
+    def multiply(self):
+        return (self.x * self.y)
+    def divide(self):
+        return (self.y/self.x)
+
+obj = Calculator(10, 94)
+print(obj.add())
+print(obj.subtract())
+print(obj.multiply())
+print(obj.divide())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3)
+class Student:
+   
+    def getname(self):
+        return self.__name
+    def setname(self, name):
+        self.__name = name  
+
+    def getrollnumber(self):
+        return self.__number
+    def setrollnumber(self, number):
+        self.__number = number     
+
+std = Student()
+
+std.setname(str(input("enter the student name: ")))   
+std.setrollnumber(int(input("enter the rollnumber of the student:")))
+
+print(std.getname())
+print(std.getrollnumber())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4)
+class Account:
+  def __init__(self, title=None, balance=0):     
+             
+            self.title = title
+            self.balance = balance           
+       
+class SavingsAccount(Account):
+    
+    def __init__(self, title=None, balance=0, interestRate=0):
+            super().__init__(title, balance)
+            self.interestrate = interestRate
+
+         
+         
+obj= SavingsAccount("rahul", 5000, 5)
+print(obj.title)
+print(obj.balance)
+print(obj.interestrate)  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5)
+class account:
+    def __init__(self, title=None, balance=0):
+       # a = "account_holder : "
+        #b = "main balance : "
+        self.title =title
+        self.balance = balance
+
+    def deposit(self, amount):
+        self.balance = self.balance + amount     
+
+    def withdrawal(self, amount):
+        self.balance = self.balance - amount
+
+    def getbalance(self):
+        print("Now your current Balance is :")
+        return  self.balance
+
+
+class saving_account(account):
+    print("initial account details :")
+    def __init__(self, title=None, balance=0, interest_rate=0):
+       # c = "interest rate : "
+        super().__init__(title,balance)
+        self.interest_rate =interest_rate  
+
+    def interest_amount(self):
+        print("The total  interest amount is : ")
+        return (self.balance * self.interest_rate / 100)
+
+
+account = saving_account('Uday', 2000, 5) 
+
+print(account.title, account.balance, account.interest_rate, sep=" ")
+
+account.deposit(int(input("Enter the deposit amount :")))
+
+account.withdrawal(int(input("Enter the withdrawl amount :")))
+
+print(account.getbalance())
+
+print(account.interest_amount())
