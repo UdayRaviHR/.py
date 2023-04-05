@@ -1,0 +1,25 @@
+CODE:  
+
+
+
+import json
+
+# Create dictionary of Indian states and their capitals
+indian_states = {
+    "Andhra Pradesh": "Hyderabad",
+    "Maharashtra": "Mumbai",
+    "Tamil Nadu": "Chennai",
+    "Karnataka": "Bengaluru",
+    "Gujarat": "Gandhinagar",
+    "Uttar Pradesh": "Lucknow",
+    "West Bengal": "Kolkata"
+}
+
+# Write the dictionary to a JSON file
+with open("indian_states.json", "w") as f:
+    json.dump(indian_states, f)
+
+# Read the contents of the JSON file and print it
+with open("indian_states.json", "r") as f:
+    data = json.load(f)
+    print(data)
