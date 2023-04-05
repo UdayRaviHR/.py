@@ -1,0 +1,169 @@
+1st CODE:  
+"1st question code":- 
+
+
+
+import json
+class Employee:
+    def __init__(self, name, dob, height, city, state):
+        self.name = name
+        self.dob = dob
+        self.height = height
+        self.city = city
+        self.state = state
+
+    def __str__(self):
+        return f"Name: {self.name}, dob: {self.dob}, Height: {self.height}, City: {self.city}, State: {self.state}"
+
+# Read employee information from JSON file
+with open("json", "r") as f:
+    data = json.load(f)
+
+# Create list of Employee objects
+employees = []
+for emp in data["employees"]:
+    emp_obj = Employee(emp["name"], emp["dob"], emp["height"], emp["city"], emp["state"])
+    employees.append(emp_obj)
+
+# Print list of Employee objects
+for emp in employees:
+    print(emp)
+
+
+
+
+
+json FILE OF INFO/DETAILS :-
+
+
+{
+    "employees": [
+        {
+            "name": "uday raviHR",
+            "dob": "1999-01-10",
+            "height": "168cm",
+            "city": "shimhassanapuri",
+            "state": "Karnataka"
+        },
+        {
+            "name": "vikas naik",
+            "dob": "2001-04-27",
+            "height": "175cm",
+            "city": "Hassan",
+            "state": "karnataka"
+        },
+        {
+            "name": "Ravi naik",
+            "dob": "1973-08-08",
+            "height": "160cm",
+            "city": "arasikere",
+            "state": "karantaka"
+        },
+        {
+            "name": "jnanesh",
+            "dob": "1999-10-02",
+            "height": "170cm",
+            "city": "mysore",
+            "state": "karnataka"
+        },
+        {
+            "name": "shiva prakash",
+            "dob": "1997-03-03",
+            "height": "175cm",
+            "city": "pudukkottai",
+            "state": "tamil nadu"
+        }
+    ]
+}
+
+
+
+
+
+
+
+
+
+2nd CODE: 
+"1st question part2 code for 7 states and its capital" :-
+
+
+
+import json
+
+# Create dictionary of Indian states and their capitals
+indian_states = {
+    "Andhra Pradesh": "Hyderabad",
+    "Maharashtra": "Mumbai",
+    "Tamil Nadu": "Chennai",
+    "Karnataka": "Bengaluru",
+    "Gujarat": "Gandhinagar",
+    "Uttar Pradesh": "Lucknow",
+    "West Bengal": "Kolkata"
+}
+
+# Write the dictionary to a JSON file
+with open("indian_states.json", "w") as f:
+    json.dump(indian_states, f)
+
+# Read the contents of the JSON file and print it
+with open("indian_states.json", "r") as f:
+    data = json.load(f)
+    print(data)
+
+
+
+
+
+
+
+
+
+
+3rd CODE:
+
+"2nd questions CODE":-  
+
+
+
+
+class Dog:
+    def __init__(self, name, age, coat_color):
+        self.name = name
+        self.age = age
+        self.coat_color = coat_color
+
+    def description(self):
+        print(f"{self.name} is {self.age} years old.")
+
+    def get_info(self):
+        print(f"{self.name}'s coat color is {self.coat_color}.")
+
+class JackRussellTerrier(Dog):
+    def __init__(self, name, age, coat_color):
+        super().__init__(name, age, coat_color)
+
+    def bark(self):
+        print("bow bow")
+
+class Bulldog(Dog):
+    def __init__(self, name, age, coat_color):
+        super().__init__(name, age, coat_color)
+
+    def sit(self):
+        print(f"{self.name} sits down.")
+
+dog1 = JackRussellTerrier("chotu", 3, "white")
+dog2 = Bulldog("pettu", 5, "black")
+
+dog1.description()
+dog1.get_info()
+dog1.bark()
+
+dog2.description()
+dog2.get_info()
+dog2.sit()
+
+
+
+
